@@ -2,12 +2,12 @@ const mongoose = require('./database');
 
 const Schema = mongoose.Schema;
 
-const saleSchema = new mongoose.Schema({
+const withdrawalSchema = new mongoose.Schema({
 
   products:  { 
-    type: Schema.Types.ObjectId, 
-    ref: 'products',
-    required: true 
+      type: Schema.Types.ObjectId, 
+      ref: 'products',
+      required: true 
    },
 
   employees: {
@@ -21,6 +21,11 @@ const saleSchema = new mongoose.Schema({
     required: true
   },
 
+  status: {
+    type: Number,
+    required: true
+  },  
+
   createdAt: {
     type: Date,
     default: Date.now
@@ -28,6 +33,7 @@ const saleSchema = new mongoose.Schema({
 
 })
 
-const Sale = mongoose.model('sale', saleSchema)
+const Withdrawal = mongoose.model('withdrawals', withdrawalSchema)
 
-module.exports = Sale
+module.exports = Withdrawal
+
