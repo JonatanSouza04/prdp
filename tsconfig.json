@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "allowSyntheticDefaultImports":true,
+        "esModuleInterop":true,
+        "types": [
+          "node",
+          "mocha",
+          "express"
+        ],
+        "target": "es6",
+        "lib": [
+          "es6"       
+        ],
+    },
+  }
